@@ -28,5 +28,15 @@ namespace WeversMarket_p1
             this.Hide();
             formProduc.Show();
         }
+
+        private void BtExit_Click(object sender, EventArgs e)
+        {
+            DialogResult Opcionsalir = MessageBox.Show("¿Estás seguro que desea salir?", "SALIR", MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+            if (Opcionsalir == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

@@ -37,7 +37,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(154, 22);
+            pictureBox1.Location = new Point(167, 22);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(681, 659);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -48,6 +48,7 @@
             // 
             BtStart.BackgroundImage = (Image)resources.GetObject("BtStart.BackgroundImage");
             BtStart.BackgroundImageLayout = ImageLayout.Center;
+            BtStart.Cursor = Cursors.Hand;
             BtStart.FlatStyle = FlatStyle.Flat;
             BtStart.ForeColor = Color.Cornsilk;
             BtStart.Location = new Point(956, 593);

@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProduc));
             panel1 = new Panel();
+            BtBack = new Button();
+            BtRefresh = new Button();
+            BtDelete = new Button();
+            BtUpdate = new Button();
+            BtAdd = new Button();
+            label1 = new Label();
             panel2 = new Panel();
             dataGridView1 = new DataGridView();
-            label1 = new Label();
-            BtAdd = new Button();
-            BtUpdate = new Button();
-            BtDelete = new Button();
-            BtRefresh = new Button();
-            BtBack = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -45,6 +45,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Wheat;
+            panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(BtBack);
             panel1.Controls.Add(BtRefresh);
             panel1.Controls.Add(BtDelete);
@@ -56,9 +57,86 @@
             panel1.Size = new Size(307, 623);
             panel1.TabIndex = 0;
             // 
+            // BtBack
+            // 
+            BtBack.BackgroundImage = (Image)resources.GetObject("BtBack.BackgroundImage");
+            BtBack.BackgroundImageLayout = ImageLayout.Center;
+            BtBack.Cursor = Cursors.Hand;
+            BtBack.FlatStyle = FlatStyle.Flat;
+            BtBack.ForeColor = Color.Wheat;
+            BtBack.Location = new Point(5, 541);
+            BtBack.Name = "BtBack";
+            BtBack.Size = new Size(90, 76);
+            BtBack.TabIndex = 3;
+            BtBack.UseVisualStyleBackColor = true;
+            BtBack.Click += BtBack_Click;
+            // 
+            // BtRefresh
+            // 
+            BtRefresh.BackColor = Color.FromArgb(128, 128, 255);
+            BtRefresh.Cursor = Cursors.Hand;
+            BtRefresh.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold);
+            BtRefresh.ForeColor = SystemColors.ControlLight;
+            BtRefresh.Location = new Point(61, 367);
+            BtRefresh.Name = "BtRefresh";
+            BtRefresh.Size = new Size(176, 48);
+            BtRefresh.TabIndex = 6;
+            BtRefresh.Text = "REFRESH";
+            BtRefresh.UseVisualStyleBackColor = false;
+            // 
+            // BtDelete
+            // 
+            BtDelete.BackColor = Color.Red;
+            BtDelete.Cursor = Cursors.Hand;
+            BtDelete.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold);
+            BtDelete.ForeColor = SystemColors.ControlLight;
+            BtDelete.Location = new Point(61, 305);
+            BtDelete.Name = "BtDelete";
+            BtDelete.Size = new Size(176, 48);
+            BtDelete.TabIndex = 5;
+            BtDelete.Text = "ELIMINAR";
+            BtDelete.UseVisualStyleBackColor = false;
+            // 
+            // BtUpdate
+            // 
+            BtUpdate.BackColor = Color.FromArgb(255, 128, 0);
+            BtUpdate.Cursor = Cursors.Hand;
+            BtUpdate.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold);
+            BtUpdate.ForeColor = SystemColors.ControlLightLight;
+            BtUpdate.Location = new Point(61, 240);
+            BtUpdate.Name = "BtUpdate";
+            BtUpdate.Size = new Size(176, 48);
+            BtUpdate.TabIndex = 4;
+            BtUpdate.Text = "EDITAR";
+            BtUpdate.UseVisualStyleBackColor = false;
+            // 
+            // BtAdd
+            // 
+            BtAdd.BackColor = Color.Green;
+            BtAdd.Cursor = Cursors.Hand;
+            BtAdd.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold);
+            BtAdd.ForeColor = SystemColors.ControlLightLight;
+            BtAdd.Location = new Point(61, 176);
+            BtAdd.Name = "BtAdd";
+            BtAdd.Size = new Size(176, 48);
+            BtAdd.TabIndex = 3;
+            BtAdd.Text = "AGREGAR";
+            BtAdd.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Historic", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(11, 68);
+            label1.Name = "label1";
+            label1.Size = new Size(285, 60);
+            label1.TabIndex = 3;
+            label1.Text = "PRODUCTOS";
+            // 
             // panel2
             // 
             panel2.BackColor = Color.Wheat;
+            panel2.BorderStyle = BorderStyle.Fixed3D;
             panel2.Location = new Point(387, 23);
             panel2.Name = "panel2";
             panel2.Size = new Size(869, 52);
@@ -72,77 +150,6 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(869, 555);
             dataGridView1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Historic", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(11, 68);
-            label1.Name = "label1";
-            label1.Size = new Size(285, 60);
-            label1.TabIndex = 3;
-            label1.Text = "PRODUCTOS";
-            // 
-            // BtAdd
-            // 
-            BtAdd.BackColor = Color.Green;
-            BtAdd.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold);
-            BtAdd.ForeColor = SystemColors.ControlLightLight;
-            BtAdd.Location = new Point(61, 176);
-            BtAdd.Name = "BtAdd";
-            BtAdd.Size = new Size(176, 48);
-            BtAdd.TabIndex = 3;
-            BtAdd.Text = "AGREGAR";
-            BtAdd.UseVisualStyleBackColor = false;
-            // 
-            // BtUpdate
-            // 
-            BtUpdate.BackColor = Color.FromArgb(255, 128, 0);
-            BtUpdate.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold);
-            BtUpdate.ForeColor = SystemColors.ControlLightLight;
-            BtUpdate.Location = new Point(61, 240);
-            BtUpdate.Name = "BtUpdate";
-            BtUpdate.Size = new Size(176, 48);
-            BtUpdate.TabIndex = 4;
-            BtUpdate.Text = "EDITAR";
-            BtUpdate.UseVisualStyleBackColor = false;
-            // 
-            // BtDelete
-            // 
-            BtDelete.BackColor = Color.Red;
-            BtDelete.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold);
-            BtDelete.ForeColor = SystemColors.ControlLight;
-            BtDelete.Location = new Point(61, 305);
-            BtDelete.Name = "BtDelete";
-            BtDelete.Size = new Size(176, 48);
-            BtDelete.TabIndex = 5;
-            BtDelete.Text = "ELIMINAR";
-            BtDelete.UseVisualStyleBackColor = false;
-            // 
-            // BtRefresh
-            // 
-            BtRefresh.BackColor = Color.FromArgb(128, 128, 255);
-            BtRefresh.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold);
-            BtRefresh.ForeColor = SystemColors.ControlLight;
-            BtRefresh.Location = new Point(61, 367);
-            BtRefresh.Name = "BtRefresh";
-            BtRefresh.Size = new Size(176, 48);
-            BtRefresh.TabIndex = 6;
-            BtRefresh.Text = "REFRESH";
-            BtRefresh.UseVisualStyleBackColor = false;
-            // 
-            // BtBack
-            // 
-            BtBack.BackgroundImage = (Image)resources.GetObject("BtBack.BackgroundImage");
-            BtBack.BackgroundImageLayout = ImageLayout.Center;
-            BtBack.FlatStyle = FlatStyle.Flat;
-            BtBack.ForeColor = Color.Wheat;
-            BtBack.Location = new Point(5, 541);
-            BtBack.Name = "BtBack";
-            BtBack.Size = new Size(90, 76);
-            BtBack.TabIndex = 3;
-            BtBack.UseVisualStyleBackColor = true;
-            BtBack.Click += BtBack_Click;
             // 
             // FormProduc
             // 

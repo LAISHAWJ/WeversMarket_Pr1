@@ -33,7 +33,8 @@
             menuStrip1 = new MenuStrip();
             BtProduc = new FontAwesome.Sharp.IconMenuItem();
             BtCateg = new FontAwesome.Sharp.IconMenuItem();
-            BtSuplid = new FontAwesome.Sharp.IconMenuItem();
+            iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
+            BtExit = new FontAwesome.Sharp.IconMenuItem();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -52,10 +53,10 @@
             // 
             menuStrip1.BackColor = Color.Wheat;
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { BtProduc, BtCateg, BtSuplid });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { BtProduc, BtCateg, iconMenuItem1, BtExit });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1044, 83);
+            menuStrip1.Size = new Size(1044, 88);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -69,7 +70,7 @@
             BtProduc.IconSize = 50;
             BtProduc.ImageScaling = ToolStripItemImageScaling.None;
             BtProduc.Name = "BtProduc";
-            BtProduc.Size = new Size(134, 79);
+            BtProduc.Size = new Size(134, 84);
             BtProduc.Text = "PRODUCTOS";
             BtProduc.TextImageRelation = TextImageRelation.ImageAboveText;
             BtProduc.Click += BtProduc_Click;
@@ -84,24 +85,41 @@
             BtCateg.IconSize = 50;
             BtCateg.ImageScaling = ToolStripItemImageScaling.None;
             BtCateg.Name = "BtCateg";
-            BtCateg.Size = new Size(138, 79);
+            BtCateg.Size = new Size(138, 84);
             BtCateg.Text = "CATEGORIAS";
             BtCateg.TextImageRelation = TextImageRelation.ImageAboveText;
             BtCateg.Click += iconMenuItem2_Click;
             // 
-            // BtSuplid
+            // iconMenuItem1
             // 
-            BtSuplid.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BtSuplid.ForeColor = Color.SeaGreen;
-            BtSuplid.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
-            BtSuplid.IconColor = Color.SeaGreen;
-            BtSuplid.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            BtSuplid.IconSize = 50;
-            BtSuplid.ImageScaling = ToolStripItemImageScaling.None;
-            BtSuplid.Name = "BtSuplid";
-            BtSuplid.Size = new Size(134, 79);
-            BtSuplid.Text = "SUPLIDORES";
-            BtSuplid.TextImageRelation = TextImageRelation.ImageAboveText;
+            iconMenuItem1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            iconMenuItem1.ForeColor = Color.SeaGreen;
+            iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            iconMenuItem1.IconColor = Color.SeaGreen;
+            iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconMenuItem1.IconSize = 50;
+            iconMenuItem1.ImageScaling = ToolStripItemImageScaling.None;
+            iconMenuItem1.Name = "iconMenuItem1";
+            iconMenuItem1.Size = new Size(134, 84);
+            iconMenuItem1.Text = "SUPLIDORES";
+            iconMenuItem1.TextImageRelation = TextImageRelation.ImageAboveText;
+            // 
+            // BtExit
+            // 
+            BtExit.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BtExit.ForeColor = Color.Red;
+            BtExit.IconChar = FontAwesome.Sharp.IconChar.Close;
+            BtExit.IconColor = Color.Red;
+            BtExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            BtExit.IconSize = 55;
+            BtExit.ImageScaling = ToolStripItemImageScaling.None;
+            BtExit.Name = "BtExit";
+            BtExit.Padding = new Padding(10, 0, 10, 0);
+            BtExit.Size = new Size(86, 84);
+            BtExit.Text = "SALIR";
+            BtExit.TextDirection = ToolStripTextDirection.Horizontal;
+            BtExit.TextImageRelation = TextImageRelation.ImageAboveText;
+            BtExit.Click += BtExit_Click;
             // 
             // FormPrincipal
             // 
@@ -126,8 +144,9 @@
 
         private PictureBox pictureBox1;
         private MenuStrip menuStrip1;
-        private FontAwesome.Sharp.IconMenuItem BtSuplid;
+        private FontAwesome.Sharp.IconMenuItem BtExit;
         private FontAwesome.Sharp.IconMenuItem BtProduc;
         private FontAwesome.Sharp.IconMenuItem BtCateg;
+        private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
     }
 }
